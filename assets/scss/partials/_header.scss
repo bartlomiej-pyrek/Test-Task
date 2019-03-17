@@ -1,0 +1,96 @@
+.header {
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px var(--dark);
+
+    @include breakpoint(small) {
+        padding: 20px 0 0;
+    }
+
+    &__wrap {
+        display: grid;
+        align-items: center;
+        grid-template-areas: 'logo menu''nav nav';
+        grid-template-columns: 1fr auto;
+        grid-gap: 0 30px;
+
+        @include breakpoint(small) {
+            grid-template-areas: 'logo''nav';
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        &__img {
+            width: 100px;
+
+            @include breakpoint(small) {
+                width: auto;
+            }
+        }
+    }
+
+    &__btn {
+        @include breakpoint(small) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        grid-column: 1 / span 2;
+        display: none;
+        margin-top: 30px;
+
+        @include breakpoint(small) {
+            display: block !important;
+            grid-column: 1 / span 1;
+            grid-area: nav;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+
+
+            @include breakpoint(small) {
+                flex-direction: row;
+                margin: 0 -36px;
+            }
+        }
+
+        &__item {
+            @include breakpoint(small) {
+                margin: 0 36px;
+            }
+        }
+
+        &__btn {
+            display: block;
+            border: 0;
+            background: transparent;
+            padding: 15px 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            transition: color 300ms ease-in-out;
+            position: relative;
+
+            &--active {
+                color: var(--active);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    border-bottom: 3px solid var(--active);
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                color: var(--active);
+            }
+        }
+    }
+}

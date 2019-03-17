@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body class="page">
+	<header class="header">
+		<div class="container">
+			<div class="header__wrap">
+				<h1 class="header__logo">
+					<img src="assets/images/logo.png" class="header__logo__img" alt="" />
+				</h1>
+				<div class="header__btn">
+					<button type="button" class="btn-menu">
+						<span class="btn-menu__box">
+							<span class="btn-menu__box__bar"></span>
+							<span class="btn-menu__box__bar"></span>
+							<span class="btn-menu__box__bar"></span>
+						</span>
+					</button>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav__list">
+						<li class="header__nav__item">
+							<a href="#tab-1" class="header__nav__btn header__nav__btn--active">About us</a>
+						</li>
+						<li class="header__nav__item">
+							<a href="#tab-2" class="header__nav__btn">Skicams</a>
+						</li>
+						<li class="header__nav__item">
+							<a href="#tab-3" class="header__nav__btn">Contact</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container">
+			<ul class="tabs">
+				<li class="tabs__item tabs__item--active" id="tab-1">
+					<div class="about">
+						<ul class="about__list">
+							<li class="about__list__item">
+								<a href="#" class="about__list__item__link">
+									<img src="https://picsum.photos/390/235" alt="" class="about__list__item__img" />
+									<span class="about__list__item__box">
+										<span class="about__list__item__title">Lorem ipsum</span>
+										<p class="about__list__item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.</p>
+									</span>
+								</a>
+							</li>
+							<li class="about__list__item">
+								<a href="#" class="about__list__item__link">
+									<img src="https://picsum.photos/390/235" alt="" class="about__list__item__img" />
+									<span class="about__list__item__box">
+										<span class="about__list__item__title">Lorem ipsum</span>
+										<p class="about__list__item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.</p>
+									</span>
+								</a>
+							</li>
+							<li class="about__list__item">
+								<a href="#" class="about__list__item__link">
+									<img src="https://picsum.photos/390/235" alt="" class="about__list__item__img" />
+									<span class="about__list__item__box">
+										<span class="about__list__item__title">Lorem ipsum</span>
+										<p class="about__list__item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsam.</p>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="tabs__item" id="tab-2">
+
+				</li>
+				<li class="tabs__item" id="tab-3">
+					<div class="contact">
+						<form class="contact__form">
+							<label class="contact__form__field">
+								<input type="text" required value="" class="contact__form__field__input" placeholder=" " />
+								<span class="contact__form__field__label">Name <span class="star">*</span></span>
+							</label>
+							<label class="contact__form__field">
+								<input type="text" required value="" class="contact__form__field__input" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+								<span class="contact__form__field__label">Email<span class="star">*</span></span>
+							</label>
+							<label class="contact__form__field contact__form__field--message">
+								<input type="text" value="" class="contact__form__field__input" placeholder=" " />
+								<span class="contact__form__field__label">Message</span>
+							</label>
+							<div class="contact__form__submit">
+								<button type="submit" class="contact__form__submit__btn">Send</button>
+							</div>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrap">
+				<p class="footer__copy">Powered by PGS</p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

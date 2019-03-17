@@ -1,0 +1,189 @@
+.main {
+    flex: 1 1 auto;
+    background: var(--grey);
+    padding: 48px 0;
+}
+
+.tabs {
+    &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+.about {
+    &__list {
+        display: grid;
+        grid-gap: 50px;
+
+
+        @include breakpoint("small") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint("medium") {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__item {
+            &__link {
+                display: block;
+                background: var(--white);
+                box-shadow: 0 0px 10px -2px var(--dark);
+                transition: all 200ms ease-in-out;
+                color: var(--dark);
+
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &__img {
+                width: 100%;
+            }
+
+            &__box {
+                display: block;
+                padding: 37px 23px 42px;
+            }
+
+            &__title {
+                font-size: 1.95rem;
+            }
+
+            &__desc {
+                margin-top: 13px;
+                font-size: 1.2rem;
+                line-height: 1.4em;
+            }
+        }
+    }
+}
+
+.cameras {
+    &__list {
+        display: grid;
+        grid-gap: 30px;
+
+        @include breakpoint(small) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__item {
+            display: block;
+            background: var(--white);
+            box-shadow: 0 0px 10px -2px var(--dark);
+            transition: all 200ms ease-in-out;
+            color: var(--dark);
+
+            &__date {
+                padding: 10px 20px;
+                text-align: right;
+            }
+
+            &__title {
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            &__photo {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(small) {
+        min-height: 745px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 605px;
+
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 0px 10px -2px var(--dark);
+
+        @include breakpoint(small) {
+            padding: 82px 140px 100px;
+            height: 530px;
+        }
+
+        &__field {
+            position: relative;
+            z-index: 1;
+
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+
+            &--message {
+                @include breakpoint(small) {
+                    margin-top: auto !important;
+                }
+
+            }
+
+            &__input {
+                width: 100%;
+                height: 40px;
+                border: 0;
+                border-bottom: 2px solid var(--fieldBorder);
+                font-size: 1rem;
+                color: var(--dark);
+
+                &:not(:placeholder-shown) {
+                    &+span {
+                        display: none;
+                    }
+                }
+            }
+
+            &__label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 40px;
+                color: var(--dark);
+                display: flex;
+                align-items: center;
+                cursor: text;
+            }
+        }
+
+        &__submit {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+
+            &__btn {
+                padding: 14px 37px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-size: 1rem;
+                border: 0;
+                color: var(--white);
+                background: var(--blue);
+                box-shadow: 0 0px 10px -2px var(--dark);
+                transition: background 350ms ease-in-out;
+
+                &:hover {
+                    background: var(--black);
+                }
+            }
+        }
+    }
+}
